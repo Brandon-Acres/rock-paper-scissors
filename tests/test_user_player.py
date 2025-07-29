@@ -3,7 +3,6 @@ from unittest.mock import patch # for testing user input
 
 from rock_paper_scissors.players.user_player import UserPlayer
 from rock_paper_scissors.moves.basic_moves import BasicMove
-from rock_paper_scissors.moves.move_set import MoveSet
 
 class TestUserPlayer(unittest.TestCase):
     def setUp(self):

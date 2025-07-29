@@ -13,7 +13,7 @@ class BasicMove(Enum):
         for move in cls:
             if move.value == s.lower():
                 return move
-        raise ValueError(f"Invalide move: {s}")
+        raise ValueError(f"Invalid move: {s}")
 
     @classmethod
     def list_moves(cls) -> list[str]:
