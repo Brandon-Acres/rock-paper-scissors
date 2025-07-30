@@ -46,7 +46,7 @@ pip install pytest
 
 ## Running the Game
 
-Run the app from the `src/` foler like this:
+Run the app from the `src/` folder like this:
 ```bash
 cd src
 python -m rock_paper_scissors
@@ -57,7 +57,7 @@ Run all automated tests from the project root:
 ```bash
 pytest
 ```
-Run a speciic test file:
+Run a specific test file:
 ```bash
 pytest tests/test_basic_rps_game.py
 ```
