@@ -11,6 +11,11 @@ class MoveSet(Protocol):
         ...
 
     @classmethod
+    def to_string(cls: type[T], move: T) -> str:
+        """Takes a MoveSet value and returns its string representation"""
+        ...
+
+    @classmethod
     def list_moves(cls: type[T]) -> list[str]:
         """Returns list of valid move strings (for help/UI)."""
         ...

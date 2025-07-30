@@ -18,4 +18,8 @@ class BasicMove(Enum):
     @classmethod
     def list_moves(cls) -> list[str]:
         return [move.value for move in cls]
+    
+    @classmethod
+    def to_string(cls, move: "BasicMove") -> str:
+        return move.value
 
