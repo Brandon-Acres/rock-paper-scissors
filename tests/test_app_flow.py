@@ -8,7 +8,7 @@ from rock_paper_scissors.__main__ import main
 
 class TestAppIntegration(unittest.TestCase):
     @patch('builtins.input')
-    def test_full_game_flow(self, mock_input):
+    def test_basic_rps_full_game_flow(self, mock_input):
         # simulate user inputs:
         # 1. select basic RPS from menu
         # 2. play a short game (3 rounds) with moves: rock, paper, scissors
@@ -20,6 +20,27 @@ class TestAppIntegration(unittest.TestCase):
             'rock',     # round 1 user move
             'paper',    # round 2 user move
             'scissors', # round 3 user move
+            'q'         # quit after game ends
+        ]
+
+        # run app via main function - goes through entire flow
+        main()
+
+        # Checking that no exceptions are raised and flow ends
+
+    @patch('builtins.input')
+    def test_lizard_spock_full_game_flow(self, mock_input):
+        # simulate user inputs:
+        # 1. select lizard spock RPS from menu
+        # 2. play a short game (3 rounds) with moves: spock, lizard, paper
+        # 3. Quit the app after the game
+
+        mock_input.side_effect = [
+            '2',        # choose lizard spock RPS game
+            '3',        # number of rounds
+            'spock',     # round 1 user move
+            'lizard',    # round 2 user move
+            'paper', # round 3 user move
             'q'         # quit after game ends
         ]
 
